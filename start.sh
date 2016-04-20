@@ -16,4 +16,6 @@ then
     -days 3650 -nodes -sha256 2>/dev/null
 fi
 
+update-ca-certificates
+
 exec nginx -g "daemon off;"
