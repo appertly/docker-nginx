@@ -19,4 +19,7 @@ There are three files that will be automatically generated if they're not provid
 
 * `/etc/ssl/dhparam.pem`: Diffie-Hellman parameter for DHE ciphersuites (will auto-generate a 2048 bit file if not provided)
 * `/etc/ssl/private/key.pem`: RSA private key (will auto-generate a 4096 bit key if not provided)
-* `/etc/ssl/cert.pem`: X.509 public certificate (will aut-generate a self-signed certificate if not provided)
+* `/etc/ssl/cert.pem`: X.509 public certificate (will auto-generate a self-signed certificate if not provided)
+
+### CA Certificates
+You can mount a volume to `/usr/local/share/ca-certificates` that contains any certificate authorities you wish to accept as trusted. Debian's `update-ca-certificates` is run before nginx executes.
